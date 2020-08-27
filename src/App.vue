@@ -1,29 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app" class="container">
+    <Heading />
+    <Figure />
+    <PopUp />
+    <Notification />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Heading from './components/Heading.vue'
+import Figure from './components/Figure.vue'
+import PopUp from './components/PopUp.vue'
+import Notification from './components/Notification.vue'
 
 export default Vue.extend({
   name: 'App',
   components: {
-    HelloWorld
+    Heading,
+    Figure,
+    PopUp,
+    Notification
   }
 })
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "src/styles/style.scss";
+
 </style>
